@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\auth",
+    "\\src\\app\\auth\\components",
+    "\\src\\app\\auth\\components\\register"
   ],
-  "SelectedNode": "\\src\\favicon.ico",
+  "SelectedNode": "\\src\\.prettierrc",
   "PreviewInSolutionExplorer": false
 }
