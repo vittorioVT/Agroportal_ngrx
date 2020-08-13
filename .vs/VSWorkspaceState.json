@@ -4,9 +4,10 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\auth",
-    "\\src\\app\\auth\\components",
-    "\\src\\app\\auth\\components\\register"
+    "\\src\\app\\auth\\components\\register",
+    "\\src\\app\\auth\\store",
+    "\\src\\app\\auth\\store\\actions"
   ],
-  "SelectedNode": "\\src\\.prettierrc",
+  "SelectedNode": "\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }
