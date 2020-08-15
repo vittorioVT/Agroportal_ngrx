@@ -4,12 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\auth",
-    "\\src\\app\\auth\\store",
+    "\\src\\app\\auth\\components",
+    "\\src\\app\\auth\\components\\register",
+    "\\src\\app\\auth\\services",
     "\\src\\app\\auth\\types",
     "\\src\\app\\shared",
-    "\\src\\app\\shared\\types",
-    "\\src\\environments"
+    "\\src\\app\\shared\\types"
   ],
-  "SelectedNode": "\\src\\app\\auth\\auth.module.ts",
+  "SelectedNode": "\\src\\app\\auth\\components\\register\\register.component.ts",
   "PreviewInSolutionExplorer": false
 }
