@@ -9,6 +9,7 @@ import { reducers } from 'src/app/auth/store/reducers';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { EffectsModule } from '@ngrx/effects';
 import { RegisterEffect } from './store/effects/register.effects';
+import { BackendErrorMessagesModule } from '../shared/modules/backendErrorsMessages/backendErrorMessages.module';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule,
+    BackendErrorMessagesModule,
     StoreModule.forFeature('auth', reducers),
     EffectsModule.forFeature([RegisterEffect]),
   ],
