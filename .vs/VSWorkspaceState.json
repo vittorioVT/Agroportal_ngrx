@@ -3,16 +3,12 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\auth",
-    "\\src\\app\\auth\\components",
-    "\\src\\app\\auth\\components\\register",
-    "\\src\\app\\auth\\store\\actions",
     "\\src\\app\\shared",
     "\\src\\app\\shared\\modules",
-    "\\src\\app\\shared\\modules\\backendErrorsMessages",
-    "\\src\\app\\shared\\modules\\backendErrorsMessages\\components",
-    "\\src\\app\\shared\\modules\\backendErrorsMessages\\components\\backendErrorsMessages"
+    "\\src\\app\\shared\\modules\\topBar",
+    "\\src\\app\\shared\\modules\\topBar\\components",
+    "\\src\\app\\shared\\modules\\topBar\\components\\topBar"
   ],
-  "SelectedNode": "\\src\\app\\auth\\components\\register\\register.component.html",
+  "SelectedNode": "\\src\\main.ts",
   "PreviewInSolutionExplorer": false
 }
