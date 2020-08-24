@@ -1,16 +1,16 @@
-import { Injectable } from "@angular/core";
-import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { switchMap, map, catchError } from "rxjs/operators";
-import { AuthService } from "src/app/auth/services/auth.service";
-import { CurrentUserInterface } from "src/app/shared/types/currentUser.interface";
-import { of } from "rxjs";
-import { HttpErrorResponse } from "@angular/common/http";
-import { PersistenceService } from "src/app/shared/services/persistence.services";
+import { Injectable } from '@angular/core';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { switchMap, map, catchError } from 'rxjs/operators';
+import { AuthService } from 'src/app/auth/services/auth.service';
+import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface';
+import { of } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
+import { PersistenceService } from 'src/app/shared/services/persistence.services';
 import {
   getCurrentUserAction,
   getCurrentUserSuccessAction,
-  getCurrentUserFailureAction
-} from "../actions/getCurrentUser.action";
+  getCurrentUserFailureAction,
+} from '../actions/getCurrentUser.action';
 
 @Injectable()
 export class GetCurrentUserEffect {
@@ -18,21 +18,26 @@ export class GetCurrentUserEffect {
     this.actions$.pipe(
       ofType(getCurrentUserAction),
       switchMap(() => {
+        const token = this.persistenceService.get('accessToken');
+        if (!token) {
+          return of(getCurrentUserFailureAction());
+        }
+
         return this.authService.getCurrentUser().pipe(
           map((currentUser: CurrentUserInterface) => {
             return getCurrentUserSuccessAction({ currentUser });
           }),
           catchError(() => {
             return of(getCurrentUserFailureAction());
-          })
+          }),
         );
-      })
-    )
+      }),
+    ),
   );
 
   constructor(
     private actions$: Actions,
     private authService: AuthService,
-    private persistenceService: PersistenceService
+    private persistenceService: PersistenceService,
   ) {}
 }
