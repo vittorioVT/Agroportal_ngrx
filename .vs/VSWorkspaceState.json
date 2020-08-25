@@ -3,14 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\auth",
-    "\\src\\app\\auth\\store",
-    "\\src\\app\\auth\\types",
     "\\src\\app\\shared",
-    "\\src\\app\\shared\\modules",
-    "\\src\\app\\shared\\modules\\topBar",
-    "\\src\\app\\shared\\types"
+    "\\src\\app\\shared\\services"
   ],
-  "SelectedNode": "\\src\\app\\shared\\modules\\topBar\\components\\topBar\\topBar.component.ts",
+  "SelectedNode": "\\src\\app\\shared\\services\\authinterceptor.service.ts",
   "PreviewInSolutionExplorer": false
 }
